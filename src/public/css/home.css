@@ -1,0 +1,50 @@
+#home {
+    height: 100vh;
+    width: 100vw;
+    background-color:/* #050400f1*/ #000000; 
+}
+
+.homeContent {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.homeContent h2{
+    font-size: 70px;
+    text-transform: uppercase;
+}
+.homeContent h4{
+    font-size: 50px;
+    text-transform: uppercase;
+}
+
+.homeTitles{
+    text-align: center;
+}
+
+.homeHeri {
+    display: flex;
+}
+
+.homeHeri h2{
+    padding: 10px;
+}
+
+.heri1{
+    color: #FF0029;
+}
+
+.heri2{
+    color: white;
+}
+
+.devTitle{
+    color: #d0d0d0;
+}
+
+.homeImage{
+    width: 600px;
+}
