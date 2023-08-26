@@ -7,7 +7,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: lightblue;
 }
 
 .meTextContent1 p{
@@ -20,6 +19,7 @@
     text-align: center;
     text-transform: uppercase;
     font-size: 25px;
+    margin-top: 50px;
 }
 
 .skillsContent{
@@ -27,9 +27,11 @@
     justify-content: center;
     align-items: center;
     margin: 10px;
+    margin-top: 50px;
 }
 
-.skillsContent svg{
-    padding: 10px;
-    width: 80px;
+svg {
+    width: 5rem;
+    padding: 20px;
 }
+
