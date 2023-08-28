@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
     const headerPlaceholder = document.getElementById("header");
     const homePlaceholder = document.getElementById("home");
     const mePlaceholder = document.getElementById("me");
+    const experiencePlaceholder = document.getElementById("experience");
     const contactPlaceholder = document.getElementById("contact");
     const footerPlaceholder = document.getElementById("footer");
 
@@ -24,6 +25,13 @@ document.addEventListener("DOMContentLoaded", ()=>{
         .then(response => response.text())
         .then(data => {
             mePlaceholder.innerHTML += data;
+    });
+
+        // Cargar el contenido del Me
+    fetch("pages/experience.html")
+        .then(response => response.text())
+        .then(data => {
+            experiencePlaceholder.innerHTML += data;
     });
 
     // Cargar el contenido del Contact

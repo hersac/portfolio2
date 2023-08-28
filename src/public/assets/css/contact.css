@@ -15,7 +15,7 @@
     grid-template-columns: repeat(6, 1fr);
     gap: 10px;
     margin: 0 auto;
-	max-width: 100%;
+	min-width: 100%;
 }
 
 .iconContent{
@@ -29,4 +29,9 @@
 
 .iconContent svg {
 	width: 20px; 
+}
+
+.iconContent a{
+	text-decoration: none;
+	color: black;
 }
