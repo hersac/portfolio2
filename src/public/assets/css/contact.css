@@ -28,10 +28,16 @@
 }
 
 .iconContent svg {
-	width: 20px; 
+	width: 30px;
+
 }
 
 .iconContent a{
 	text-decoration: none;
 	color: black;
+}
+
+.iconContent a:hover{
+	color: #ff0029;
+	transition: all 0.5s;
 }
