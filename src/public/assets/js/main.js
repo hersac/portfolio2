@@ -1,3 +1,5 @@
+import prueba from "./prueba.js";
+
 document.addEventListener("DOMContentLoaded", () => {
     const headerPlaceholder = document.getElementById("header");
     const homePlaceholder = document.getElementById("home");
@@ -5,12 +7,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const experiencePlaceholder = document.getElementById("experience");
     const contactPlaceholder = document.getElementById("contact");
     const footerPlaceholder = document.getElementById("footer");
-
-    //Components defined
-
-    const carouselComponent = document.getElementById('carouselComponent');
-    const prueba = document.getElementById('prueba');
-
 
     // Cargar el contenido del header
     fetch("templates/header.html")
@@ -30,41 +26,29 @@ document.addEventListener("DOMContentLoaded", () => {
     fetch("pages/me.html")
         .then(response => response.text())
         .then(data => {
-            mePlaceholder.innerHTML += data;
+            mePlaceholder.innerHTML = data;
         });
 
     // Cargar el contenido del Me
     fetch("pages/experience.html")
         .then(response => response.text())
-        .then(data => {
-            experiencePlaceholder.innerHTML += data;
+        .then(async data => {
+            experiencePlaceholder.innerHTML = await data;
+            prueba.llamada;
         });
 
     // Cargar el contenido del Contact
     fetch("pages/contact.html")
         .then(response => response.text())
         .then(data => {
-            contactPlaceholder.innerHTML += data;
+            contactPlaceholder.innerHTML = data;
         });
 
     // Cargar el contenido del footer
     fetch("templates/footer.html")
         .then(response => response.text())
         .then(data => {
-            footerPlaceholder.innerHTML += data;
-        });
-
-    //Add Components
-    fetch("components/carousel.html")
-        .then(response => response.text())
-        .then(data => {
-            carouselComponent.innerHTML += data;
-        });
-
-    fetch("components/prueba.html")
-        .then(response => response.text())
-        .then(data => {
-            prueba.innerHTML += data;
+            footerPlaceholder.innerHTML = data;
         });
 
 });
