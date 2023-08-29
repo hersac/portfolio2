@@ -1,6 +1,4 @@
-import prueba from "./prueba.js";
-
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", async () => {
     const headerPlaceholder = document.getElementById("header");
     const homePlaceholder = document.getElementById("home");
     const mePlaceholder = document.getElementById("me");
@@ -30,11 +28,11 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
     // Cargar el contenido del Me
-    fetch("pages/experience.html")
+     fetch("pages/experience.html")
         .then(response => response.text())
-        .then(async data => {
-            experiencePlaceholder.innerHTML = await data;
-            prueba.llamada;
+        .then(data => {
+            console.log(data);
+            experiencePlaceholder.innerHTML = data;
         });
 
     // Cargar el contenido del Contact
