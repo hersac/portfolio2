@@ -1,11 +1,11 @@
-document.addEventListener("DOMContentLoaded", async () => {
+document.addEventListener("DOMContentLoaded", () => {
     const headerPlaceholder = document.getElementById("header");
     const homePlaceholder = document.getElementById("home");
     const mePlaceholder = document.getElementById("me");
     const experiencePlaceholder = document.getElementById("experience");
     const contactPlaceholder = document.getElementById("contact");
     const footerPlaceholder = document.getElementById("footer");
-
+    
     // Cargar el contenido del header
     fetch("templates/header.html")
         .then(response => response.text())
@@ -28,10 +28,10 @@ document.addEventListener("DOMContentLoaded", async () => {
         });
 
     // Cargar el contenido del Me
-     fetch("pages/experience.html")
+    fetch("pages/experience.html")
         .then(response => response.text())
         .then(data => {
-            console.log(data);
+            console.log("data1")
             experiencePlaceholder.innerHTML = data;
         });
 
@@ -48,5 +48,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         .then(data => {
             footerPlaceholder.innerHTML = data;
         });
+    
+    
 
 });
