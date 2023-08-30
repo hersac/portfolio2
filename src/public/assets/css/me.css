@@ -21,16 +21,3 @@
     font-size: 25px;
     margin-top: 50px;
 }
-
-.skillsContent{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 10px;
-    margin-top: 50px;
-}
-
-.skillsContent svg {
-    width: 5rem;
-    padding: 20px;
-}
