@@ -9,16 +9,22 @@ fetch("components/carousel.html")
 
     //CAROUSEL CONFIG
     const carouselContainer = document.getElementsByClassName('carouselContainer');
-    const carouselSlide = document.getElementsByClassName('carouselSlide');
+    const carouselSlide = document.querySelector('.carouselSlide');
+    const totalSlides = document.querySelectorAll('.carouselSlide').length; //verificar
+    
     const duration = 3000;
-    const currentIndex = 0;
+    let currentIndex = 0;
 
-    function updateCarousel(){
-      const hidde = -currentIndex * 100;
-      //carouselSlide.style.transform = `translateX(${hidde})`;
-      carouselSlide.style.background = "lightcoral";
+    function next(){
+      currentIndex = (currentIndex + 1) % totalSlides; //VErificar
+      updateCarousel(currentIndex);
     }
 
-    setTimeout(updateCarousel, duration);
+    function updateCarousel(index){
+      const hidde = -index * 100;
+      carouselSlide.style.transform = `translateX(${hidde}%)`;
+    }
+
+    setTimeout(next, duration);
 
   });
