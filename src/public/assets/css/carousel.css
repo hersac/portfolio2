@@ -3,29 +3,60 @@
 
 }
 
-.carouselContainer {
-  display: flex;
-  overflow: hidden;
-  width: 100%;
-  max-width: 600px;
-  margin: 0 auto;
+@keyframes slide {
+  from{
+    transform: translateX(50%);
 
+  }
+
+  to {
+    transform: translateX(-100%);
+  } 
 }
 
-.carouselSlide {
-  flex: 0 0 100%;
+.logos {
   display: flex;
   justify-content: center;
+  width: 800px;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 60px 0;
+  position: relative;
+}
+
+.logos:before, .logos:after {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: 0;
+  content: "";
+  z-index: 2;
+}
+
+.logos:before{
+  left: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+}
+
+.logos:after{
+  right: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+}
+
+
+.logos:hover .logosSlide{
+  animation-play-state: paused;
+}
+
+
+
+.logosSlide {
+  display: flex;
   align-items: center;
-  transition: transform 0.5s ease-in-out;
-
+  animation: slide 50s infinite linear;
 }
 
-.carouselSlide svg {
-  width: 20%;
-
-}
-
-.carouselSlide:not(:last-child) {
-  margin-right: 10px;
+.logosSlide svg {
+  width: 90px;
+  padding: 20px;
 }

@@ -9,44 +9,18 @@ fetch("components/carousel.html")
 
     // CAROUSEL CONFIG
 
-    const carouselSlides = document.querySelectorAll('.carouselSlide');
-    const duration = 1000;
-    let currentIndex = 0;
-
-    function next() {
-      currentIndex = currentIndex + 1;
-      updateCarousel(currentIndex, carouselSlides);
+    function cloneAndAppendLogosSlide() {
+      const logosSlide = document.querySelector('.logosSlide');
+      const clone = logosSlide.cloneNode(true);
+      document.querySelector('.logos').appendChild(clone);
     }
-
-    function updateCarousel(index, slides) {
-      const distance = 100;
-      slides.forEach((slide, slideIndex) => {
-        slide.style.transition = 'transform 0.5s ease';
-        slide.style.transform = `translateX(${distance * (slideIndex - index)}%)`;
-      });
-      removeSlidesOutOfView();
-    }
-
-    function removeSlidesOutOfView() {
-      const carouselSlides = document.querySelectorAll('.carouselSlide');
-      const carouselWidth = carouselSlides[0].offsetWidth;
     
-      carouselSlides.forEach((slide) => {
-        if (slide.offsetLeft < -carouselWidth) {
-          slide.remove();
-        }
-      });
-    }
-
-    function resetTransition() {
-      carouselSlides.forEach((slide) => {
-        slide.style.transition = 'none';
-      });
-    }
-
-    setInterval(() => {
-      resetTransition();
-      next();
-    }, duration);
+    const logos = document.querySelector('.logos');
+  
+    logos.addEventListener('animationiteration', () => {
+      cloneAndAppendLogosSlide();
+    });
+  
+    cloneAndAppendLogosSlide();
 
   });
