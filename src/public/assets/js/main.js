@@ -23,7 +23,6 @@ fetch("pages/home.html")
 fetch("pages/me.html")
     .then(response => response.text())
     .then(data => {
-        console.log("prueba 1");
         mePlaceholder.innerHTML = data;
     });
 

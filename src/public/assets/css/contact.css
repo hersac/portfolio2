@@ -38,6 +38,6 @@
 }
 
 .iconContent a:hover{
-	color: #ff0029;
+	color: var(--primary-color);
 	transition: all 0.5s;
 }

@@ -35,12 +35,12 @@
 
 .logos:before{
   left: 0;
-  background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), var(--bg-primary));
 }
 
 .logos:after{
   right: 0;
-  background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), var(--bg-primary));
 }
 
 
@@ -59,4 +59,9 @@
 .logosSlide svg {
   width: 90px;
   padding: 20px;
+}
+
+.logosSlide svg:hover{
+  fill: var(--primary-color);
+  filter: drop-shadow(0 0 5px var(--primary-color));
 }

@@ -1,7 +1,6 @@
 #home {
     height: 100vh;
     width: 100vw;
-    background-color:/* #050400f1*/ #000000; 
 }
 
 .homeContent {
@@ -34,15 +33,13 @@
 }
 
 .heri1{
-    color: #FF0029;
-}
-
-.heri2{
-    color: white;
+    color: var(--primary-color);
+    transition: all 1s ;
 }
 
 .devTitle{
-    color: #d0d0d0;
+    /*color: #d0d0d0;*/
+    color: var(--secundary-text-color);
 }
 
 .homeImage{
