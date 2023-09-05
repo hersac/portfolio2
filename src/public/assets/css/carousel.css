@@ -48,8 +48,6 @@
   animation-play-state: paused;
 }
 
-
-
 .logosSlide {
   display: flex;
   align-items: center;
@@ -57,11 +55,12 @@
 }
 
 .logosSlide svg {
+  fill: var(--primary-text-color);
   width: 90px;
   padding: 20px;
 }
 
 .logosSlide svg:hover{
   fill: var(--primary-color);
-  filter: drop-shadow(0 0 5px var(--primary-color));
+  /*filter: drop-shadow(0 0 5px var(--primary-color));*/
 }

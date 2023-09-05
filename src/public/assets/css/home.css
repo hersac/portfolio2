@@ -44,4 +44,5 @@
 
 .homeImage{
     width: 50%;
+    filter: drop-shadow(0 0 5px var(--primary-text-color));
 }
