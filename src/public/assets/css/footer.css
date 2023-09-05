@@ -1,0 +1,49 @@
+#footer{
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.footerContent{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 0%;
+
+}
+
+.footerElements{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.footerGrid{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footerText{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.footerText svg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 12px;
+    text-align: center;
+}
+
+.footerText div{
+    font-size: 15px;
+    text-align: center;
+}
+
+
+

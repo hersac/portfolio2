@@ -1,5 +1,7 @@
 const title = document.getElementsByClassName('heri1');
+const homeImage = document.getElementsByClassName('homeImage');
 let validator = 0;
+let secondValidator = 0;
 
 function radiance(){
     if(validator===0){
@@ -11,4 +13,17 @@ function radiance(){
     }
 }
 
+
+
+function floatImage(){
+    if(validator===0){
+        homeImage[0].style.transform = 'translateY(10%)';
+        secondValidator = 1;
+    } else{
+        homeImage[0].style.removeProperty('transform');
+        secondValidator = 0;
+    }
+}
+
 setInterval(radiance, 2000);
+setInterval(floatImage, 1000);

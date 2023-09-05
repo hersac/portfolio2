@@ -9,8 +9,8 @@
     --primary-text-color: #121212;
     --secundary-text-color: #222222;
 }
-/*
-:root{
+
+.darkMode{
     --bg-primary: #00001c;
     --bg-secundary: ;
     --primary-color: #ff0025;
@@ -19,7 +19,7 @@
     --primary-text-color: #eaeaea;
     --secundary-text-color: #8d8d8d;
 }
-*/
+
 
 *{
     margin: 0;
@@ -30,31 +30,4 @@
 
 body{
     background-color: var(--bg-primary);
-}
-
-nav{
-    /*background-color: lightblue;*/
-    margin: 1rem;;
-}
-
-nav ul{
-    display: flex;
-    justify-content: center;
-}
-
-nav li{
-    list-style: none;
-    padding: 10px;
-}
-
-nav li a{
-    text-decoration: none;
-    color: var(--primary-text-color);
-    padding: 10px;
-}
-
-nav li a:hover {
-    border-radius: 10px;
-    color: var(--primary-color);
-    transition: all 0.3s;
 }

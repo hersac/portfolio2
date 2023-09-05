@@ -34,7 +34,7 @@
 
 .heri1{
     color: var(--primary-color);
-    transition: all 2s ;
+    transition: all 2s;
 }
 
 .devTitle{
@@ -45,4 +45,5 @@
 .homeImage{
     width: 50%;
     filter: drop-shadow(0 0 5px var(--primary-text-color));
+    transition: all 10s;
 }
