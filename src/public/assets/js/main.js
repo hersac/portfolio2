@@ -10,6 +10,21 @@ fetch("templates/header.html")
     .then(response => response.text())
     .then(data => {
         headerPlaceholder.innerHTML = data;
+
+        // -- Smooth Scrolling Efect --
+
+        const links = document.querySelectorAll('nav li a');
+        links.forEach(link => {
+            link.addEventListener("click", (e)=>{
+                e.preventDefault();
+                const href = link.getAttribute('href');
+                document.querySelector(href).scrollIntoView({
+                    behavior: "smooth"
+                });
+            });
+        });
+
+        // --                       --
     });
 
 // Cargar el contenido del Home
@@ -46,3 +61,6 @@ fetch("templates/footer.html")
     .then(data => {
         footerPlaceholder.innerHTML = data;
     });
+
+
+

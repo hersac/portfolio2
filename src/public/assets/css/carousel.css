@@ -62,5 +62,6 @@
 
 .logosSlide svg:hover{
   fill: var(--primary-color);
+  transition: all 0.5s;
   /*filter: drop-shadow(0 0 5px var(--primary-color));*/
 }

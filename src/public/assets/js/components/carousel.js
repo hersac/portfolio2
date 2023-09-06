@@ -24,3 +24,4 @@ fetch("components/carousel.html")
     cloneAndAppendLogosSlide();
 
   });
+
