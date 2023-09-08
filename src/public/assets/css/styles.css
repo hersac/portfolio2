@@ -31,3 +31,20 @@
 body{
     background-color: var(--bg-primary);
 }
+
+input, textarea{
+    margin: 10px;
+	padding: 10px;
+    background: none;
+	border: none;
+    resize: none;
+}
+
+button{
+    margin: 10px;
+    padding: 10px;
+    background: none;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+}
