@@ -23,6 +23,10 @@
 	justify-content: center;
 }
 
+#emailIcon{
+	cursor: pointer;
+}
+
 .iconContent div{
 	text-align: center;
 }

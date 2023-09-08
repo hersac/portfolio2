@@ -1,4 +1,15 @@
 #contactModal {
+	display: none;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.backgroundModal{
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -7,7 +18,6 @@
 	left: 0;
 	width: 100%;
 	height: 100%;
-	transform: translateX();
 	background: #00000080;
 	z-index: 3;
 }
@@ -20,6 +30,7 @@
 	max-width:600px;
 	height: 400px;
 	padding: 30px;
+	z-index: 4;
 }
 
 .modalForm {
@@ -41,11 +52,16 @@
 	color: var(--bg-primary);
 	background-color: var(--primary-color);
 	transition: all 0.5s;
+	border: solid 1px var(--primary-color);
 }
 
 .btnSend:hover{
 	color: var(--primary-color);
 	background-color: var(--bg-primary);
-	border: solid 1px var(--primary-color);
 	transition: all 0.1s;
+}
+
+.messageTextArea{
+	min-height: 120px;
+	border: solid 1px black;
 }
