@@ -78,7 +78,3 @@
 	min-height: 120px;
 	border: solid 1px black;
 }
-
-.noScroll{
-	overflow: hidden;
-}

@@ -30,6 +30,7 @@
 
 body{
     background-color: var(--bg-primary);
+    overflow: hidden;
 }
 
 input, textarea{

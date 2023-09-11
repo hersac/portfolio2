@@ -15,7 +15,7 @@ fetch("templates/header.html")
 
         const links = document.querySelectorAll('nav li a');
         links.forEach(link => {
-            link.addEventListener("click", (e)=>{
+            link.addEventListener("click", (e) => {
                 e.preventDefault();
                 const href = link.getAttribute('href');
                 document.querySelector(href).scrollIntoView({
@@ -25,6 +25,12 @@ fetch("templates/header.html")
         });
 
         // --                       --
+
+        // -- Fade Effect --
+        
+        const tituloHome = document.querySelector("#titleHome");
+        console.log(tituloHome);
+
     });
 
 // Cargar el contenido del Home
@@ -61,6 +67,3 @@ fetch("templates/footer.html")
     .then(data => {
         footerPlaceholder.innerHTML = data;
     });
-
-
-
