@@ -5,15 +5,21 @@ fetch("components/contactModal.html").then(response => response.text()).then(dat
 
 	//Functions modal
 	const emailIcon = document.getElementById('emailIcon');
+	const btnCancel = document.getElementById('btnCancel');
 	const modalContent = document.getElementsByClassName('modalContent');
-	const backgroundModal = document.getElementsByClassName('backgroundModal');
+	const html = document.documentElement;
+	const body = document.body;
 
 	emailIcon.addEventListener("click", ()=>{
 		modal.style.display = "flex";
+		html.classList.add("noScroll");
+		body.classList.add("noScroll");
 	});
 
-	backgroundModal[0].addEventListener("click", ()=>{
+	btnCancel.addEventListener("click",()=>{
 		modal.style.display = "none";
+		html.classList.remove("noScroll");
+		body.classList.remove("noScroll");
 	});
 
 });

@@ -28,7 +28,7 @@
 	align-items:center;
 	background: var(--bg-primary);
 	max-width:600px;
-	height: 400px;
+	height: 450px;
 	padding: 30px;
 	z-index: 4;
 }
@@ -61,7 +61,24 @@
 	transition: all 0.1s;
 }
 
+.btnCancel{
+	color: var(--bg-primary);
+	background-color: var(--secundary-text-color);
+	transition: all 0.5s;
+	border: solid 1px var(--secundary-text-color);
+}
+
+.btnCancel:hover{
+	color: var(--secundary-text-color);
+	background-color: var(--bg-primary);
+	transition: all 0.1s;
+}
+
 .messageTextArea{
 	min-height: 120px;
 	border: solid 1px black;
+}
+
+.noScroll{
+	overflow: hidden;
 }
