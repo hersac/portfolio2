@@ -25,12 +25,6 @@ fetch("templates/header.html")
         });
 
         // --                       --
-
-        // -- Fade Effect --
-        
-        const tituloHome = document.querySelector("#titleHome");
-        console.log(tituloHome);
-
     });
 
 // Cargar el contenido del Home
@@ -38,6 +32,11 @@ fetch("pages/home.html")
     .then(response => response.text())
     .then(data => {
         homePlaceholder.innerHTML = data;
+
+        // -- Scroll fade effect -- 
+
+        const homeTitles = document.getElementById("homeTitles");
+        console.log(homeTitles);
     });
 
 // Cargar el contenido del Me
