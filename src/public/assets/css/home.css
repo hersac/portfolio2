@@ -9,6 +9,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: linear-gradient(to top, #c8c8c8, var(--bg-primary) 25%);
 }
 
 .homeContent h2{
@@ -43,7 +44,8 @@
 }
 
 .homeImage{
-    width: 50%;
-    filter: drop-shadow(0 0 5px var(--primary-text-color));
+    margin-top: 20px;
+    width: 25%;
+    filter: drop-shadow(3px 0 1px var(--primary-text-color));
     transition: all 10s;
 }

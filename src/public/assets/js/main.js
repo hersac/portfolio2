@@ -36,7 +36,40 @@ fetch("pages/home.html")
         // -- Scroll fade effect -- 
 
         const homeTitles = document.getElementById("homeTitles");
-        console.log(homeTitles);
+        const homeHeri = document.getElementById('homeHeri');
+        const devTitle = document.getElementById('devTitle');
+        const homeImage = document.getElementById('homeImage');
+
+        window.addEventListener("scroll", ()=>{
+            const distance = window.scrollY;
+            const finalP = homeTitles.offsetTop;
+
+            if(distance>0){
+                console.log("hello");
+                homeHeri.style.opacity = 0;
+                homeHeri.style.transition = "all 0.2s";
+
+                devTitle.style.opacity = 0;
+                devTitle.style.transition = "all 0.8s";
+
+                homeImage.style.opacity = 0;
+                homeImage.style.transition = "all 0.3s"
+
+
+            } else if(distance<(finalP/2)){
+                console.log("hi");
+                homeHeri.style.opacity = 1;
+                homeHeri.style.transition = "all 5s";
+
+                devTitle.style.opacity = 1;
+                devTitle.style.transition = "all 2s";
+
+                homeImage.style.opacity = 1;
+                homeImage.style.transition = "all 10s"
+            }
+        });
+
+        // --                    -- 
     });
 
 // Cargar el contenido del Me
