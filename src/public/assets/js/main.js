@@ -40,12 +40,11 @@ fetch("pages/home.html")
         const devTitle = document.getElementById('devTitle');
         const homeImage = document.getElementById('homeImage');
 
-        window.addEventListener("scroll", ()=>{
+        window.addEventListener("scroll", () => {
             const distance = window.scrollY;
             const finalP = homeTitles.offsetTop;
 
-            if(distance>0){
-                console.log("hello");
+            if (distance > 0) {
                 homeHeri.style.opacity = 0;
                 homeHeri.style.transition = "all 0.2s";
 
@@ -56,8 +55,7 @@ fetch("pages/home.html")
                 homeImage.style.transition = "all 0.3s"
 
 
-            } else if(distance<(finalP/2)){
-                console.log("hi");
+            } else if (distance < (finalP / 2)) {
                 homeHeri.style.opacity = 1;
                 homeHeri.style.transition = "all 5s";
 
@@ -91,7 +89,32 @@ fetch("pages/contact.html")
     .then(response => response.text())
     .then(data => {
         contactPlaceholder.innerHTML = data;
+
+        // -- Deal Effect --
+
+        window.addEventListener("scroll", () => {
+            const contactContent = document.querySelectorAll('.contactContent');
+            const iconContent = document.querySelectorAll(".iconContent");
+            const windowHeight = contactContent.offsetHeight;
+            const finalPosition = window.scrollY;
+            const elementPosition = contactContent[0].offsetTop;
+            const activPosition = elementPosition / 2;
+/*
+            if(finalPosition>activPosition){
+                iconContent.forEach(icon => {
+                    console.log(icon);
+                    console.log(`${finalPosition}, ${elementPosition}, ${activPosition}`);
+                })
+            }
+*/
+            console.log(windowHeight);
+        });
+
+        // --             --
+
     });
+
+
 
 // Cargar el contenido del footer
 fetch("templates/footer.html")

@@ -9,7 +9,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: linear-gradient(to top, #c8c8c8, var(--bg-primary) 25%);
+    /*background-image: linear-gradient(to top, rgb(var(--secundary-text-color-rgb), 0.2), var(--bg-primary) 25%);*/
 }
 
 .homeContent h2{
