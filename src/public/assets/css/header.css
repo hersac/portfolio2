@@ -4,11 +4,15 @@
     position: relative;
 }
 
-nav{
+.headerContent{
+    background-image: linear-gradient(to bottom, rgb(var(--bg-tertiary-rgb)), var(--bg-primary));
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
+}
+
+nav{
     margin: 1rem;
 }
 
@@ -31,5 +35,5 @@ nav li a{
 nav li a:hover {
     border-radius: 10px;
     color: var(--primary-color);
-    transition: all 0.3s;
+    transition: all 1s;
 }

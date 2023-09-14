@@ -21,6 +21,9 @@
 .iconContent{
 	display: flex;
 	justify-content: center;
+	transform: translateX(-500%);
+	transform: translateY(500%);
+	opacity: 0;
 }
 
 #emailIcon{

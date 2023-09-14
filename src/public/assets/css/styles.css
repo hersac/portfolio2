@@ -2,7 +2,8 @@
 
 :root{
     --bg-primary: #eaeaea;
-    --bg-secundary: ;
+    --bg-secundary-rgb: 255, 0, 38;
+    --bg-tertiary-rgb: 0, 0, 0;
     --primary-color: #ff0025;
     --secundary-color: #FFFF03;
     --tertiary-color: #19B9FF;
@@ -13,7 +14,8 @@
 
 .darkMode{
     --bg-primary: #00001c;
-    --bg-secundary: ;
+    --bg-secundary-rgb: 255, 0, 38;
+    --bg-tertiary-rgb: 0, 0, 0;
     --primary-color: #ff0025;
     --secundary-color: #FFFF03;
     --tertiary-color: #19B9FF;

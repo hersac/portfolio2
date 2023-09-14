@@ -40,7 +40,7 @@ fetch("pages/home.html")
         const devTitle = document.getElementById('devTitle');
         const homeImage = document.getElementById('homeImage');
 
-        window.addEventListener("scroll", () => {
+        function homeOpacity(){
             const distance = window.scrollY;
             const finalP = homeTitles.offsetTop;
 
@@ -65,7 +65,11 @@ fetch("pages/home.html")
                 homeImage.style.opacity = 1;
                 homeImage.style.transition = "all 10s"
             }
-        });
+        }
+
+        homeOpacity();
+
+        window.addEventListener("scroll",homeOpacity);
 
         // --                    -- 
     });
@@ -90,35 +94,40 @@ fetch("pages/contact.html")
     .then(data => {
         contactPlaceholder.innerHTML = data;
 
-        // -- Deal Effect --
+        // -- Fade Deal Effect --
 
-        window.addEventListener("scroll", () => {
-
-            const contactContent = document.querySelectorAll('.contactContent');
+        function fadeDealEffect(){
             const iconContent = document.querySelectorAll(".iconContent");
 
             const windowHeight = window.innerHeight;
             const movePoint = window.scrollY;
             const activePoint = (windowHeight * 4) - (windowHeight / 2);
-            let num = 2;
-            const pIcon = 100;
+            let num = 1;
+            const pIcon = 500;
 
             iconContent.forEach(icon =>{
                 if(movePoint>activePoint){
-                    icon.style.transform = `translatex(0%)`;
+                    icon.style.transform = `translateX(0%)`;
+                    icon.style.transform = `translateY(0%)`;
+                    icon.style.opacity = 1;
                     icon.style.transition = `all ${num}s`;
+                    num = num + 1;
                 } else if(movePoint<activePoint){
-                    icon.style.transform = `translatex(-${pIcon}%)`;
-                    icon.style.transition = "all 1s";
+                    icon.style.transform = `translateX(-${pIcon}%)`;
+                    icon.style.transform = `translateY(${pIcon}%)`;
+                    icon.style.opacity = 0;
+                    icon.style.transition = `all ${num}s`;
                 }
             });
-        });
+        };
+
+        fadeDealEffect();
+
+        window.addEventListener("scroll", fadeDealEffect);
 
         // --             --
 
     });
-
-
 
 // Cargar el contenido del footer
 fetch("templates/footer.html")

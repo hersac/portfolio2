@@ -9,7 +9,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    /*background-image: linear-gradient(to top, rgb(var(--secundary-text-color-rgb), 0.2), var(--bg-primary) 25%);*/
 }
 
 .homeContent h2{
@@ -27,6 +26,7 @@
 
 .homeHeri {
     display: flex;
+    opacity: 0;
 }
 
 .homeHeri h2{
@@ -41,11 +41,13 @@
 .devTitle{
     /*color: #d0d0d0;*/
     color: var(--secundary-text-color);
+    opacity: 0;
 }
 
 .homeImage{
     margin-top: 20px;
     width: 25%;
     filter: drop-shadow(3px 3px 1px var(--primary-text-color));
+    opacity: 0;
     transition: all 10s;
 }
