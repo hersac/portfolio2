@@ -93,21 +93,25 @@ fetch("pages/contact.html")
         // -- Deal Effect --
 
         window.addEventListener("scroll", () => {
+
             const contactContent = document.querySelectorAll('.contactContent');
             const iconContent = document.querySelectorAll(".iconContent");
-            const windowHeight = contactContent.offsetHeight;
-            const finalPosition = window.scrollY;
-            const elementPosition = contactContent[0].offsetTop;
-            const activPosition = elementPosition / 2;
-/*
-            if(finalPosition>activPosition){
-                iconContent.forEach(icon => {
-                    console.log(icon);
-                    console.log(`${finalPosition}, ${elementPosition}, ${activPosition}`);
-                })
-            }
-*/
-            console.log(windowHeight);
+
+            const windowHeight = window.innerHeight;
+            const movePoint = window.scrollY;
+            const activePoint = (windowHeight * 4) - (windowHeight / 2);
+            let num = 2;
+            const pIcon = 100;
+
+            iconContent.forEach(icon =>{
+                if(movePoint>activePoint){
+                    icon.style.transform = `translatex(0%)`;
+                    icon.style.transition = `all ${num}s`;
+                } else if(movePoint<activePoint){
+                    icon.style.transform = `translatex(-${pIcon}%)`;
+                    icon.style.transition = "all 1s";
+                }
+            });
         });
 
         // --             --
