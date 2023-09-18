@@ -40,7 +40,7 @@ fetch("pages/home.html")
         const devTitle = document.getElementById('devTitle');
         const homeImage = document.getElementById('homeImage');
 
-        function homeOpacity(){
+        function homeOpacity() {
             const distance = window.scrollY;
             const finalP = homeTitles.offsetTop;
 
@@ -69,7 +69,7 @@ fetch("pages/home.html")
 
         homeOpacity();
 
-        window.addEventListener("scroll",homeOpacity);
+        window.addEventListener("scroll", homeOpacity);
 
         // --                    -- 
     });
@@ -96,7 +96,7 @@ fetch("pages/contact.html")
 
         // -- Fade Deal Effect --
 
-        function fadeDealEffect(){
+        function fadeDealEffect() {
             const iconContent = document.querySelectorAll(".iconContent");
 
             const windowHeight = window.innerHeight;
@@ -105,14 +105,14 @@ fetch("pages/contact.html")
             let num = 1;
             const pIcon = 500;
 
-            iconContent.forEach(icon =>{
-                if(movePoint>activePoint){
+            iconContent.forEach(icon => {
+                if (movePoint > activePoint) {
                     icon.style.transform = `translateX(0%)`;
                     icon.style.transform = `translateY(0%)`;
                     icon.style.opacity = 1;
                     icon.style.transition = `all ${num}s`;
                     num = num + 1;
-                } else if(movePoint<activePoint){
+                } else if (movePoint < activePoint) {
                     icon.style.transform = `translateX(-${pIcon}%)`;
                     icon.style.transform = `translateY(${pIcon}%)`;
                     icon.style.opacity = 0;
@@ -135,3 +135,24 @@ fetch("templates/footer.html")
     .then(data => {
         footerPlaceholder.innerHTML = data;
     });
+
+function crearEstrellas() {
+    // Generar un número aleatorio de estrellas
+    const cantidadEstrellas = Math.floor(Math.random() * 1000);
+
+    // Recorrer las estrellas y colocarlas en posiciones aleatorias
+    for (let i = 0; i < cantidadEstrellas; i++) {
+        // Generar una posición aleatoria para la estrella
+        const posX = Math.floor(Math.random() * window.innerWidth);
+        const posY = Math.floor(Math.random() * window.innerHeight);
+
+        // Crear una nueva estrella y colocarla en la posición aleatoria
+        const estrella = document.createElement("div");
+        estrella.classList.add("estrella");
+        estrella.style.left = posX + "px";
+        estrella.style.top = posY + "px";
+
+        // Agregar la estrella al DOM
+        document.body.appendChild(estrella);
+    }
+}

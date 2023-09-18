@@ -47,7 +47,7 @@
 .homeImage{
     margin-top: 20px;
     width: 25%;
-    filter: drop-shadow(3px 3px 1px var(--primary-text-color));
+    filter: drop-shadow(var(--shadowImage));
     opacity: 0;
     transition: all 10s;
 }

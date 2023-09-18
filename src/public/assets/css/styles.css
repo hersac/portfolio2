@@ -2,25 +2,27 @@
 
 :root{
     --bg-primary: #eaeaea;
-    --bg-secundary-rgb: 255, 0, 38;
-    --bg-tertiary-rgb: 0, 0, 0;
+    --bg-secundary-rgb: 255, 204, 0, 0.3;
+    --bg-tertiary-rgb: 255, 0, 38, 0.2;
     --primary-color: #ff0025;
     --secundary-color: #FFFF03;
     --tertiary-color: #19B9FF;
     --primary-text-color: #121212;
     --secundary-text-color: #222222;
-    --secundary-text-color-rgb: 34,34,34;
+    --shadowImage: 3px 3px 1px var(--primary-text-color);
+
 }
 
 .darkMode{
     --bg-primary: #00001c;
-    --bg-secundary-rgb: 255, 0, 38;
-    --bg-tertiary-rgb: 0, 0, 0;
+    --bg-secundary-rgb: 255, 0, 38, 0.2;
+    --bg-tertiary-rgb: 0, 0, 0, 0.5;
     --primary-color: #ff0025;
     --secundary-color: #FFFF03;
     --tertiary-color: #19B9FF;
     --primary-text-color: #eaeaea;
     --secundary-text-color: #8d8d8d;
+    --shadowImage: 0px 0px 5px var(--primary-color);
 }
 
 
@@ -53,3 +55,10 @@ button{
     border-radius: 25px;
     cursor: pointer;
 }
+
+.estrella {
+    width: 1px;
+    height: 1px;
+    background-color: white;
+    opacity: 0.5;
+  }

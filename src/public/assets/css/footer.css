@@ -11,7 +11,7 @@
     position: absolute;
     bottom: 0%;
     width: 100vw;
-    background-image: linear-gradient(to top, rgb(var(--bg-secundary-rgb), 20%), var(--bg-primary));
+    background-image: linear-gradient(to top, rgb(var(--bg-secundary-rgb)), var(--bg-primary));
 }
 
 .footerElements{
