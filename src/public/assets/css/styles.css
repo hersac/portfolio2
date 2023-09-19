@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
+/*
 :root{
     --bg-primary: #eaeaea;
     --bg-secundary-rgb: 255, 204, 0, 0.3;
@@ -12,8 +12,8 @@
     --shadowImage: 3px 3px 1px var(--primary-text-color);
 
 }
-
-.darkMode{
+*/
+:root{
     --bg-primary: #00001c;
     --bg-secundary-rgb: 255, 0, 38, 0.2;
     --bg-tertiary-rgb: 0, 0, 0, 0.5;
@@ -36,6 +36,7 @@
 body{
     background-color: var(--bg-primary);
     overflow: hidden;
+    position: relative;
 }
 
 input, textarea{
@@ -56,9 +57,43 @@ button{
     cursor: pointer;
 }
 
-.estrella {
-    width: 1px;
-    height: 1px;
-    background-color: white;
-    opacity: 0.5;
-  }
+/* Start Effects */
+
+.stars {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    pointer-events: none;
+    z-index: -1;
+    animation: stars 300s infinite;
+}
+
+@keyframes stars {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-100vh);
+    }
+}
+
+.star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: white;
+    border-radius: 50%;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}

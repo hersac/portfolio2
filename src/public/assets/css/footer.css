@@ -40,6 +40,7 @@
     align-items: center;
     width: 12px;
     text-align: center;
+    color: var(--primary-text-color);
 }
 
 .footerText div{
