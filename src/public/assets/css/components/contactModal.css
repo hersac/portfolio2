@@ -40,8 +40,8 @@
 .contactInput{
 	width: 90%;
 	height: 30%;
-	border-bottom: solid 1px black;
-	transition: border-bottom-color 0.3s ease;
+	border-bottom: solid 1px var(--primary-text-color);
+	transition: border-bottom-color 0.3s;
 }
 
 .contactInput:focus{
@@ -63,18 +63,18 @@
 
 .btnCancel{
 	color: var(--bg-primary);
-	background-color: var(--secundary-text-color);
+	background-color: var(--primary-text-color);
 	transition: all 0.5s;
-	border: solid 1px var(--secundary-text-color);
+	border: solid 1px var(--primary-text-color);
 }
 
 .btnCancel:hover{
-	color: var(--secundary-text-color);
+	color: var(--primary-text-color);
 	background-color: var(--bg-primary);
 	transition: all 0.1s;
 }
 
 .messageTextArea{
 	min-height: 120px;
-	border: solid 1px black;
+	border: solid 1px var(--primary-text-color);
 }

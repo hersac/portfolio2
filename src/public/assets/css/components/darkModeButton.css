@@ -3,9 +3,42 @@
 }
 
 .btnLightDark{
-    position: absolute;
+    position: fixed;
     top: 0;
-    left: 0;
+    right: 0;
+    margin: 10px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
     z-index: 5;
-    background-color: grey;
+    width: 40px;
+    background-color: none;
+    border: solid 2px var(--primary-color);
+    transition: all 0.5s;
+}
+
+.btnLightDark:hover{
+   background-color: var(--primary-color);
+}
+
+.btnLightDark svg{
+    fill: var(--primary-color);
+    transition: all 0.5s;
+}
+
+.btnLightDark svg:hover{
+    fill: #fff;
+}
+
+#lightMode{
+    display: none;
+    justify-content: center;
+    align-items:center;
+}
+
+#darkMode{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+
 }
