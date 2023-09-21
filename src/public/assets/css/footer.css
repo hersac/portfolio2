@@ -11,7 +11,7 @@
     position: absolute;
     bottom: 0%;
     width: 100vw;
-    background-image: linear-gradient(to top, rgb(var(--bg-secundary-rgb)), var(--bg-primary));
+    background-image: linear-gradient(to top, rgb(var(--bg-secundary-rgb)), rgb(var(--bg-primary-rgb), 0));
 }
 
 .footerElements{
@@ -40,7 +40,7 @@
     align-items: center;
     width: 12px;
     text-align: center;
-    color: var(--primary-text-color);
+    fill: var(--primary-color);
 }
 
 .footerText div{

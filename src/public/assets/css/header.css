@@ -5,7 +5,7 @@
 }
 
 .headerContent{
-    background-image: linear-gradient(to bottom, rgb(var(--bg-tertiary-rgb)), var(--bg-primary));
+    background-image: linear-gradient(to bottom, rgb(var(--bg-tertiary-rgb)), rgb(var(--bg-primary-rgb), 0));
     position: fixed;
     top: 0;
     left: 0;
