@@ -51,17 +51,17 @@
 .logosSlide {
   display: flex;
   align-items: center;
-  animation: slide 50s infinite linear;
+  animation: slide 120s infinite linear;
 }
 
-.logosSlide svg {
-  fill: var(--primary-text-color);
+.logosSlide img {
+  filter: grayscale(100%);
   width: 90px;
   padding: 20px;
 }
 
-.logosSlide svg:hover{
-  fill: var(--primary-color);
-  transition: all 0.5s;
+.logosSlide img:hover{
+  filter: grayscale(0%);
+  transition: all 1s;
   /*filter: drop-shadow(0 0 5px var(--primary-color));*/
 }
