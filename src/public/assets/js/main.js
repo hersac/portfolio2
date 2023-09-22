@@ -81,11 +81,48 @@ fetch("pages/me.html")
         mePlaceholder.innerHTML = data;
     });
 
-// Cargar el contenido del Me
+// Cargar el contenido del Experience
 fetch("pages/experience.html")
     .then(response => response.text())
     .then(data => {
         experiencePlaceholder.innerHTML = data;
+
+        const expTitleNumber = document.querySelectorAll('.expTitleNumber');
+        const expPlus = document.querySelectorAll('.expPlus');
+        let radiance = true;
+        let val = 0;
+
+        function floatingNumbers() {
+            expTitleNumber.forEach((num) => {
+
+                if (val === 0) {
+                    num.style.transform = "translateY(30%)";
+                    console.log("si");
+                    val = 1;
+                } else if (val === 1) {
+                    num.style.removeProperty('transform');
+                    console.log("no");
+                    val = 0;
+                }
+
+            });
+        }
+
+        function radianceTitles() {
+            expPlus.forEach((title) => {
+                if (val === 0) {
+                    num.style.transform = "translateY(30%)";
+                    console.log("si");
+                    val = 1;
+                } else if (val === 1) {
+                    num.style.removeProperty('transform');
+                    console.log("no");
+                    val = 0;
+                }
+            });
+        }
+
+        setInterval(floatingNumbers, 2000);
     });
 
 // Cargar el contenido del Contact

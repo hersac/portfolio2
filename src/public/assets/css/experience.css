@@ -1,3 +1,39 @@
-#experience{
+#experience {
     height: 100vh;
+}
+
+.expContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    column-gap: 10%;
+}
+
+.expValue {
+    text-align: center;
+}
+
+.expValue h2 {
+    text-transform: uppercase;
+}
+
+.expTitle,
+.expTitleNumber {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 5px;
+}
+
+.expTitleNumber {
+    transition: all 3s;
+}
+
+.expPlus {
+    color: var(--primary-color);
+}
+
+.expNumber {
+    font-size: 50px;
 }
