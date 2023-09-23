@@ -89,7 +89,7 @@ fetch("pages/experience.html")
 
         const expTitleNumber = document.querySelectorAll('.expTitleNumber');
         const expPlus = document.querySelectorAll('.expPlus');
-        let radiance = true;
+        let radiance = false;
         let val = 0;
 
         function floatingNumbers() {
@@ -97,11 +97,9 @@ fetch("pages/experience.html")
 
                 if (val === 0) {
                     num.style.transform = "translateY(30%)";
-                    console.log("si");
                     val = 1;
                 } else if (val === 1) {
                     num.style.removeProperty('transform');
-                    console.log("no");
                     val = 0;
                 }
 
@@ -110,19 +108,18 @@ fetch("pages/experience.html")
 
         function radianceTitles() {
             expPlus.forEach((title) => {
-                if (val === 0) {
-                    num.style.transform = "translateY(30%)";
-                    console.log("si");
-                    val = 1;
-                } else if (val === 1) {
-                    num.style.removeProperty('transform');
-                    console.log("no");
-                    val = 0;
+                if (radiance === false) {
+                    title.style.filter = 'drop-shadow(0 0 5px var(--primary-color))';
+                    radiance = true;
+                } else if (radiance === true) {
+                    title.style.removeProperty('filter');
+                    radiance = false;
                 }
             });
         }
 
-        setInterval(floatingNumbers, 2000);
+        setInterval(floatingNumbers, 3000);
+        setInterval(radianceTitles, 5000);
     });
 
 // Cargar el contenido del Contact
@@ -130,6 +127,12 @@ fetch("pages/contact.html")
     .then(response => response.text())
     .then(data => {
         contactPlaceholder.innerHTML = data;
+
+        const btnCurriculum = document.getElementById('btnCurriculum');
+        btnCurriculum.addEventListener("click", ()=>{
+            let pdfUrl = btnCurriculum.getAttribute("cvData");
+            window.open(pdfUrl, "_blank");
+        });
 
         // |-- Fade Deal Effect --|
 

@@ -3,10 +3,15 @@
 }
 
 .expContent {
+    height: 100%;
+    row-gap: 10px;
+}
+
+.expTitles {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
+    height: 70%;
     column-gap: 10%;
 }
 
@@ -27,13 +32,38 @@
 }
 
 .expTitleNumber {
-    transition: all 3s;
+    transition: all 4s;
 }
 
 .expPlus {
     color: var(--primary-color);
+    transition: all 1s;
 }
 
 .expNumber {
     font-size: 50px;
+}
+
+.btnContentExp{
+    display: flex;
+    justify-content: center;
+}
+
+.btnCurriculum{
+    width: 400px;
+    height: 80px;
+    border-radius: 50px;
+    font-size: 24px;
+	color: var(--bg-primary);
+	background-color: var(--primary-color);
+	transition: all 0.5s;
+	border: solid 1px var(--primary-color);
+
+}
+
+.btnCurriculum:hover{
+	color: var(--primary-color);
+	background-color: var(--bg-primary);
+	transition: all 0.5s;
+    box-shadow: 0 0 8px var(--primary-color);
 }
