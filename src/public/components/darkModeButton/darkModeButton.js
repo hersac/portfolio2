@@ -1,6 +1,6 @@
 // Call Carousel
 
-fetch("components/darkModeButton.html")
+fetch("components/darkModeButton/darkModeButton.html")
   .then((response) => response.text())
   .then((data) => {
     const btnDarkModeContent = document.getElementById("btnDarkModeContent");

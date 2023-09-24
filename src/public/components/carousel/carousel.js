@@ -1,6 +1,6 @@
 // Call Carousel
 
-fetch("components/carousel.html")
+fetch("components/carousel/carousel.html")
   .then((response) => response.text())
   .then((data) => {
     const carouselComponent = document.getElementById("carouselComponent");
