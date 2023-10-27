@@ -18,7 +18,13 @@ fetch("templates/header/header.html")
         headerCSS.href = "templates/header/header.css";
         document.head.appendChild(headerCSS);
 
-        const headerJS = document.createElement('script');
+        const headerMobileCSS = document.createElement('link');
+        headerMobileCSS.rel = "stylesheet";
+        headerMobileCSS.type = "text/css";
+        headerMobileCSS.href = "templates/header/headerMobile.css";
+        document.head.appendChild(headerMobileCSS);
+        
+		const headerJS = document.createElement('script');
         headerJS.src = "templates/header/header.js";
         document.body.appendChild(headerJS);
     });
@@ -35,6 +41,12 @@ fetch("pages/home/home.html")
         homeCSS.type = "text/css";
         homeCSS.href = "pages/home/home.css";
         document.head.appendChild(homeCSS);
+
+        const homeMobileCSS = document.createElement('link');
+        homeMobileCSS.rel = "stylesheet";
+        homeMobileCSS.type = "text/css";
+        homeMobileCSS.href = "pages/home/homeMobile.css";
+        document.head.appendChild(homeMobileCSS);
 
         const homeJS = document.createElement('script');
         homeJS.src = "pages/home/home.js";
